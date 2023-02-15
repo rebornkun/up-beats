@@ -1,11 +1,25 @@
+/* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+@font-face {
+  font-family: jokerman;
+  src: url(../assets/fonts/Jokerman.ttf);
+}
+
+/* fonts */
+
 :root{
   --rebbon-blue:#89E3FF;
   --midnight:#1A222D;
+  --dark-blue:#0803FF;
   --tin-white:#FAFFFE;
+  --green:#00FF75;
   --chill-green:#2BD4A4;
   --yellow:#FFEF89;
   --peal:#FFAC89;
   --black:#000;
+  --purple:#B507F2;
+  --red:#F10B0B;
 }
 
 *{
@@ -17,4 +31,9 @@
 }
 ::before,::after{
   box-sizing: border-box;
+}
+
+body{
+  /* font-family: 'jokerman', sans-serif; */
+  font-family: 'Poppins', sans-serif;
 }
