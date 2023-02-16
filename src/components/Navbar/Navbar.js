@@ -7,7 +7,7 @@ import music from "../../assets/svg/musiccap.svg";
 
 const Navbar = () => {
   return (
-    <div className="absolute top-64 z-20 ml-8">
+    <div className=" sm:block fixed top-32 sm:top-24 lg:top-40 z-20 ml-8">
       <div className="bg-chill-green rounded-full p-2 mb-8">
         <img src={disk} alt="" className="my-[2em] mx-auto block" />
         <div className="my-[2em]">
