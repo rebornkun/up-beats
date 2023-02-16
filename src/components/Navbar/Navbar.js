@@ -4,6 +4,7 @@ import vector from "../../assets/svg/Vector.svg";
 import Subtarct from "../../assets/svg/Subtract.svg";
 import Iconly from "../../assets/svg/Iconly.svg";
 import music from "../../assets/svg/musiccap.svg";
+import profile from '../../assets/svg/profile.svg'
 
 const Navbar = () => {
   return (
@@ -14,6 +15,7 @@ const Navbar = () => {
           <img src={music} alt="" className=" mx-auto block" />
           <img src={vector} alt="" className=" mx-auto block" />
         </div>
+        <img src={profile} alt="" className='my-[2em] mx-auto block' />
       </div>
 
       <div className="bg-chill-green rounded-full p-2">
