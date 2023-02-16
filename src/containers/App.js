@@ -1,14 +1,15 @@
 import { Navigate, Route, Routes } from 'react-router';
 import Navbar from '../components/Navbar/Navbar';
-import SplashScreen from '../components/SplashScreen/SplashScreen';
+// import SplashScreen from '../components/SplashScreen/SplashScreen';
 import DashBoard from '../pages/Dashboard/DashBoard';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App w-full">
       
-      <div className='body'>
+      <div className='body container'>
+        
       <nav>
         <Navbar />
       </nav>
@@ -22,7 +23,7 @@ function App() {
 
       </div>
 
-      <SplashScreen />
+      {/* <SplashScreen /> */}
     </div>
   );
 }
