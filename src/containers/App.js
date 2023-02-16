@@ -1,4 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router';
+
 import SplashScreen from '../components/SplashScreen/SplashScreen';
 import DashBoard from '../pages/Dashboard/DashBoard';
 import './App.css';
@@ -9,7 +10,7 @@ function App() {
       
       <div className='body'>
       <nav>
-        
+   
       </nav>
       <section>
         <Routes>
