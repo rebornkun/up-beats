@@ -50,7 +50,7 @@ const Navbar = () => {
       </div>
       <div className="flex gap-2 items-center relative min-h-[2rem] ml-auto">
         
-        <div className="text-[.7rem] md:text-[1.5rem] text-tin-white font-bold ">Rebornkun</div>
+        <div className="navbar_username text-[1.5rem] text-tin-white font-bold ">Rebornkun</div>
         <div className=" relative min-h-[.2rem] min-w-[.5rem] md:max-h-[1rem]">
           <MusicNote notes={3} />
         </div>

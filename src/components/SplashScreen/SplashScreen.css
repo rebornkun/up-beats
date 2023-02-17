@@ -61,62 +61,62 @@
     width: 0px;
     transition: all 0.5s ease;
     border-radius: 50%;
-    top: 0;
-    right: 2rem;
-    left: 0;
+    top: -50%;
+    right: 0;
+    left: -30%;
     bottom: 0;
     /* margin: auto; */
-    animation: circleAni 2s linear 0.5s infinite;
+    animation: circleAni 2s linear 0.5s infinite alternate;
 }
 .splash_container .circle.two{
     background-color: var(--chill-green);
     transition: all 0.5s ease;
-    top: 0;
-    right: 2rem;
-    left: 0;
+    top: -50%;
+    right: 0;
+    left: -30%;
     bottom: 0;
     /* margin: auto; */
-    animation: circleAni 2s linear 0.8s infinite;
+    animation: circleAni 1.5s linear 1s infinite alternate;
 }
 .splash_container .circle.three{
     background-color: var(--peal);
     transition: all 0.5s ease;
-    top: 0;
+    top: -50%;
     right: 0;
-    left: 2rem;
-    bottom: 1rem;
+    left: -30%;
+    bottom: 0;
     /* margin: auto; */
-    animation: circleAni 2s linear 1.2s infinite;
+    animation: circleAni 2s linear 2s infinite alternate;
 }
 .splash_container .circle.four{
     background-color: var(--peal);
     transition: all 0.5s ease;
-    top: 100%;
-    right: 0;
-    left: 100%;
-    bottom: 1rem;
+    top: 0;
+    right: -100%;
+    left: 0;
+    bottom: -100%;
     margin: auto;
-    animation: circleAni 2s linear 0.3s infinite;
+    animation: circleAni 1.5s linear 0.3s infinite alternate;
 }
 .splash_container .circle.five{
     background-color: var(--yellow);
     transition: all 0.5s ease;
-    top: 100%;
-    right: 0;
-    left: 100%;
-    bottom: 1rem;
+    top: 0;
+    right: -100%;
+    left: 0;
+    bottom: -100%;
     margin: auto;
-    animation: circleAni 2s linear 0.9s infinite;
+    animation: circleAni 2s linear 0.9s infinite alternate;
 }
 .splash_container .circle.six{
     background-color: var(--purple);
     transition: all 0.5s ease;
-    top: 100%;
-    right: 0;
-    left: 100%;
-    bottom: 1rem;
+    top: 0;
+    right: -100%;
+    left: 0;
+    bottom: -100%;
     margin: auto;
-    animation: circleAni 2s linear 1.5s infinite;
+    animation: circleAni 1.5s linear 1.5s infinite alternate;
 }
 
 .splash_container h1{
@@ -160,10 +160,11 @@
     0%{
         height: 100px;
         width: 100px;
-        transform: scale(1);
+        /* transform: scale(1); */
     }
     100%{
-        transform: scale(50);
+        height: 1000px;
+        width: 1000px;
     }
 }
 
