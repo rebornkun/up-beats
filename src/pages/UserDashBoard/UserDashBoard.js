@@ -1,8 +1,8 @@
 import Card from '../../components/Card/Card';
 import './UserDashBoard.css'
-import key1 from '../../assets/svg/Vector (1).svg'
-import key2 from '../../assets/svg/music_stroke.svg'
-import music from '../../assets/svg/music.svg'
+import key1 from '../../assets/svg/music-note-purple.svg'
+import key2 from '../../assets/svg/music-note-yellow.svg'
+import music from '../../assets/svg/music-note-blue.svg'
 import profile from "../../assets/svg/profile.svg";
 
 
@@ -11,34 +11,41 @@ const UserDashBoard = () => {
     const users = [
         {
             dj: 'DJ MENT',
-            song: 'i wanna knack you by reborn kun'
+            song: 'i wanna knack you by reborn kun',
+            id: 1,
         },
         {
             dj:'DJ FILLA',
-            song: 'FELON by anderson kun'
+            song: 'FELON by anderson kun',
+            id: 2,
         },
         {
             dj:'DJ FILLA',
-            song: 'FELON by anderson kun'
+            song: 'FELON by anderson kun',
+            id: 3,
         },
         {
             dj:'DJ FILLA',
-            song: 'FELON by anderson kun'
+            song: 'FELON by anderson kun',
+            id: 4,
         },
         {
             dj:'DJ FILLA',
-            song: 'FELON by anderson kun'
+            song: 'FELON by anderson kun',
+            id: 5,
         },
         {
             dj:'DJ FILLA',
-            song: 'FELON by anderson kun'
+            song: 'FELON by anderson kun',
+            id: 6,
         }
     ]
 
     return (
-        <div className="ml-0 md:ml-40 lg:ml-50 2xl:w-60 mt-40">
-            {users.map(user=>(
-                <Card>
+        <div className="relative w-full flex flex-col min-h-[100%] overflow-auto">
+            {users.map((user)=>{
+                return(
+                    <Card key={user.id}>
                   <div className="flex items-center">
                     <img src={profile} alt="" />
                  <div className="">
@@ -52,7 +59,9 @@ const UserDashBoard = () => {
                  </div>
                   </div>
                 </Card>
-            ))}
+                )
+                
+})}
         </div>
     );
 }
