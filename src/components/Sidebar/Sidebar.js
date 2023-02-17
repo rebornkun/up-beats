@@ -17,7 +17,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar_container">
       <div className="first_bar">
-        <img src={disk} alt=""  className="w-[60%]"/>
+        <img src={disk} alt=""  className="w-[60%]" onClick={()=>handleNavigation("/dashboard")}/>
 
         <img src={MusicLibrary} alt=""  className="w-[60%]" onClick={()=>handleNavigation("/dashboard/dj-dashboard")}/>
 
