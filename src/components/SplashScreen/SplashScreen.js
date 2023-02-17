@@ -5,14 +5,18 @@ import { useEffect, useState } from 'react';
 const SplashScreen = () => {
     
     const [show, setShow] = useState(true)
+    const [dis, setDis] = useState(false)
     useEffect(()=>{
         setTimeout(()=>{
             setShow(false)
+            setTimeout(()=>{
+                setDis(true)
+            },2000)
         },[5000])
     },[])
 
     return (
-        <div className={`splash_container ${!show && 'unshow'}`}>
+        <div className={`splash_container ${!show && 'unshow'} ${dis && 'dis'}`}>
             <div className='icon'>
                 <div className='hand'>
                     <svg width="126" height="185" viewBox="0 0 126 185" fill="none" xmlns="http://www.w3.org/2000/svg">

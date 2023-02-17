@@ -4,7 +4,7 @@ import './DashBoard.css'
 
 const DashBoard = () => {
     return (
-        <div className='flex relative w-full'>
+        <div className='dashboard'>
             
             <UserDashBoard />
         </div>
