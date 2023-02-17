@@ -20,7 +20,7 @@ function App() {
           <section className="">
             <Routes>
               <Route path="/" element={<Navigate to="dashboard" replace={true} />} />
-              <Route path="dashboard" element={<DashBoard />} />
+              <Route path="dashboard/*" element={<DashBoard />} />
               <Route path="*" element={<Navigate to="dashboard" replace={true} />} />
             </Routes>
           </section>
