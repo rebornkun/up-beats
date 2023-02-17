@@ -42,7 +42,7 @@ const UserDashBoard = () => {
     ]
 
     return (
-        <div className="relative w-full flex flex-col min-h-[100%] overflow-auto">
+        <div className="userdashboard w-[100%]">
             {users.map((user)=>{
                 return(
                     <Card key={user.id}>
@@ -62,6 +62,7 @@ const UserDashBoard = () => {
                 )
                 
 })}
+
         </div>
     );
 }

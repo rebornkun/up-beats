@@ -13,18 +13,17 @@ function App() {
           <Navbar />
         </header>
 
-        <div className=" flex mt-[6rem] md:mt-[8rem] min-h-[100%] px-2 md:px-3">
-        <nav className=" w-[10%] min-h-[80%] flex items-start  fixed z-[200]">
-          <Sidebar />
-        </nav>
-
-        <section className="ml-[10%] w-[80%] min-h-[100%] ">
-          <Routes>
-            <Route path="/" element={<Navigate to="dashboard" replace={true} />} />
-            <Route path="dashboard" element={<DashBoard />} />
-            <Route path="*" element={<Navigate to="dashboard" replace={true} />} />
-          </Routes>
-        </section>
+        <div className="myContainer">
+          <nav className="">
+            <Sidebar />
+          </nav>
+          <section className="">
+            <Routes>
+              <Route path="/" element={<Navigate to="dashboard" replace={true} />} />
+              <Route path="dashboard" element={<DashBoard />} />
+              <Route path="*" element={<Navigate to="dashboard" replace={true} />} />
+            </Routes>
+          </section>
         </div>
        
       </div>
