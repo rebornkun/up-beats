@@ -21,7 +21,7 @@ function App() {
         <section className="ml-[10%] w-[80%] min-h-[100%] ">
           <Routes>
             <Route path="/" element={<Navigate to="dashboard" replace={true} />} />
-            <Route path="dashboard" element={<DashBoard />} />
+            <Route path="dashboard/*" element={<DashBoard />} />
             <Route path="*" element={<Navigate to="dashboard" replace={true} />} />
           </Routes>
         </section>
