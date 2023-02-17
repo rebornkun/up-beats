@@ -17,7 +17,6 @@ function App() {
           <nav className="">
             <Sidebar />
           </nav>
-
           <section className="">
             <Routes>
               <Route path="/" element={<Navigate to="dashboard" replace={true} />} />

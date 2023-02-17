@@ -1,5 +1,6 @@
 import React from "react";
 import './Sidebar.css'
+import {useNavigate } from "react-router";
 import disk from "../../assets/svg/disk.svg";
 import Wrench from "../../assets/svg/wrench.svg";
 import Logout from "../../assets/svg/logout.svg";
@@ -7,14 +8,20 @@ import MusicLibrary from "../../assets/svg/music-library-2.svg";
 import profile from "../../assets/svg/profile.svg";
 
 const Sidebar = () => {
+  const navigate = useNavigate()
+
+  const handleNavigation = (link)=>{
+    console.log(link);
+    navigate(link)
+  }
   return (
     <div className="sidebar_container">
       <div className="first_bar">
         <img src={disk} alt=""  className="w-[60%]"/>
 
-        <img src={MusicLibrary} alt=""  className="w-[60%]"/>
+        <img src={MusicLibrary} alt=""  className="w-[60%]" onClick={()=>handleNavigation("/dashboard/dj-dashboard")}/>
 
-        <img src={profile} alt=""  className="w-[60%]"/>
+        <img src={profile} alt=""  className="w-[60%]" onClick={()=>handleNavigation("/dashboard/profile")}/>
       </div>
 
       <div className="second_bar">
