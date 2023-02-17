@@ -4,8 +4,8 @@ import './DashBoard.css'
 
 const DashBoard = () => {
     return (
-        <div className='flex justify-between'>
-            <Sidebar />
+        <div className='flex relative w-full'>
+            
             <UserDashBoard />
         </div>
     );
