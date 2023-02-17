@@ -37,3 +37,21 @@ body{
   /* font-family: 'jokerman', sans-serif; */
   font-family: 'Poppins', sans-serif;
 }
+
+section::-webkit-scrollbar {
+  width: 6px;
+  height: 4px;
+}
+section::-webkit-scrollbar-track {
+border-radius: 10px;
+/* background-color: transparent;
+scrollbar-color: transparent; */
+}
+section::-webkit-scrollbar-thumb {
+border-radius: 7px;
+background: var(--pri);
+}
+
+header{
+  padding: 0rem 1rem;
+}

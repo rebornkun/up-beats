@@ -1,9 +1,18 @@
 import './SplashScreen.css'
 import key from '../../assets/svg/note_keys.svg'
+import { useEffect, useState } from 'react';
 
 const SplashScreen = () => {
+    
+    const [show, setShow] = useState(true)
+    useEffect(()=>{
+        setTimeout(()=>{
+            setShow(false)
+        },[5000])
+    },[])
+
     return (
-        <div className="splash_container">
+        <div className={`splash_container ${!show && 'unshow'}`}>
             <div className='icon'>
                 <div className='hand'>
                     <svg width="126" height="185" viewBox="0 0 126 185" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -23,11 +32,18 @@ const SplashScreen = () => {
                 </div>
             </div>
             <h1>Up Beats</h1>
-            <div className='vibration'>
                 <div className='circle'>
-
                 </div>
-            </div>
+                <div className='circle two'>
+                </div>
+                <div className='circle three'>
+                </div>
+                <div className='circle four'>
+                </div>
+                <div className='circle five'>
+                </div>
+                <div className='circle six'>
+                </div>
         </div>
     );
 }
