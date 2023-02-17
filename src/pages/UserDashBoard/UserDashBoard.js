@@ -42,7 +42,7 @@ const UserDashBoard = () => {
     ]
 
     return (
-        <div className="userdashboard w-[100%]">
+        <div className="userdashboard w-[90%]">
             {users.map((user)=>{
                 return(
                     <Card key={user.id}>
