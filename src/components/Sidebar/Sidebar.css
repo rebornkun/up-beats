@@ -1,33 +1,47 @@
-.sidebar_container{
-    width: 50px;
-    position: fixed;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 2rem;
-    align-items: flex-start;
+.sidebar_container {
+  width: 50px;
+  position: fixed;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+  align-items: flex-start;
 }
-.sidebar_container .first_bar{
-    height: 200px;
-    background-color: var(--chill-green);
-    border-radius: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.sidebar_container .first_bar {
+  height: 200px;
+  background-color: var(--chill-green);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
-.sidebar_container .second_bar{
-    height: 150px;
-    background-color: var(--chill-green);
-    border-radius: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.sidebar_container .second_bar {
+  height: 150px;
+  background-color: var(--chill-green);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
-.sidebar_container .third_bar{
-    align-self: flex-end;
+.sidebar_container .third_bar {
+  align-self: flex-end;
+}
+/* active */
+
+.active::after {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 2rem;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-left: 20px solid #FFAC89;
+  border-bottom: 20px solid transparent;
+  transform: rotate(180deg);
 }
