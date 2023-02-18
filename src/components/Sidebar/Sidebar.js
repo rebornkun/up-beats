@@ -1,6 +1,7 @@
-import React from "react";
-import './Sidebar.css'
-import {useNavigate } from "react-router";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router";
+import "./Sidebar.css";
+import { useNavigate } from "react-router";
 import disk from "../../assets/svg/disk.svg";
 import Wrench from "../../assets/svg/wrench.svg";
 import Logout from "../../assets/svg/logout.svg";
@@ -8,25 +9,36 @@ import MusicLibrary from "../../assets/svg/music-library-2.svg";
 import profile from "../../assets/svg/profile.svg";
 
 const Sidebar = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  console.log(pathname);
+ 
 
-  const handleNavigation = (link)=>{
+  const handleNavigation = (link) => {
     console.log(link);
-    navigate(link)
-  }
+    navigate(link);
+  };
   return (
-    <div className="sidebar_container">
-      <div className="first_bar">
-        <img src={disk} alt=""  className="w-[60%]" onClick={()=>handleNavigation("/dashboard")}/>
+    <div className="sidebar_container relative">
+      <div className="first_bar ">
 
-        <img src={MusicLibrary} alt=""  className="w-[60%]" onClick={()=>handleNavigation("/dashboard/dj-dashboard")}/>
+        <div className={`w-[60%] ${pathname == "/dashboard"? "active" : "none"} relative`} onClick={() => handleNavigation("/dashboard")}>          
+          <img src={disk} alt="" className="h-full w-full"  />
+        </div>
+        <div className={`w-[60%] ${pathname == "/dashboard/dj-dashboard"? "active" : "none"} relative`} onClick={() => handleNavigation("/dashboard/dj-dashboard")}>          
+          <img src={MusicLibrary} alt="" className="h-full w-full" />
+        </div>
 
-        <img src={profile} alt=""  className="w-[60%]" onClick={()=>handleNavigation("/dashboard/profile")}/>
+       
+        <div className={`w-[60%] ${pathname == "/dashboard/profile"? "active" : "none"} relative`}  onClick={() => handleNavigation("/dashboard/profile")}>          
+          <img src={profile} alt="" className="h-full w-full" />
+        </div>
+       
       </div>
 
-      <div className="second_bar">
-        <img src={Wrench} alt=""  className="w-[60%]"/>
-        <img src={Logout} alt=""  className="w-[60%]"/>
+      <div className="second_bar ">
+        <div className={`w-[60%] ${pathname == "/dashboard/setting"? "active" : "none"} relative`}><img src={Wrench} alt="" className="w-full h-full" /></div>
+        <div className="w-[60%] relative"><img src={Logout} alt="" className="w-full h-full" /></div>
       </div>
       <div className="third_bar flex flex-col  gap-[1rem] mt-[2rem] w-full relative">
         {[...Array(3)].map((e, i) => {

@@ -17,7 +17,7 @@ function App() {
           <nav className="">
             <Sidebar />
           </nav>
-          <section className="">
+          <section>
             <Routes>
               <Route path="/" element={<Navigate to="dashboard" replace={true} />} />
               <Route path="dashboard/*" element={<DashBoard />} />
