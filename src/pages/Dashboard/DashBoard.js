@@ -7,7 +7,7 @@ import './DashBoard.css'
 
 const DashBoard = () => {
     return (
-        <div className='dashboard flex relative w-[100%]'>
+        <div className='dashboard flex relative w-[100%] min-h-[100%]'>
             <Routes>
                 <Route index element={<UserDashBoard />}/>
                 <Route path='/dj-dashboard' element={<DjDashboard />} />

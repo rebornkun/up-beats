@@ -4,7 +4,7 @@ import Login from './Login';
 import SignUp from './Signup';
 export default function ProfileDashboard() {
   return (
-    <div>
+    <div className='relative w-full'>
       <Routes>
                 <Route index element={<Login />}/>          
        </Routes>
