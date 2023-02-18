@@ -42,14 +42,14 @@ const UserDashBoard = () => {
     ]
 
     return (
-        <div className="userdashboard">
+        <div className="userdashboard w-[90%]">
             {users.map((user)=>{
                 return(
                     <Card key={user.id}>
                   <div className="flex items-center">
                     <img src={profile} alt="" />
                  <div className="">
-                 <div className="flex my-4 space-x-0 md:space-x-2">
+                 <div className="flex space-x-0 md:space-x-2">
                     <h3 className='font-bold text-white'>{user.dj}</h3>
                     <img src={key1} alt="" />
                     <img src={key2} alt="" />

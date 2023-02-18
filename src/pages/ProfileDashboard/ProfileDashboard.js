@@ -1,7 +1,13 @@
 import React from 'react'
-
+import {Routes, Route } from 'react-router';
+import Login from './Login';
+import SignUp from './Signup';
 export default function ProfileDashboard() {
   return (
-    <div>ProfileDashboard</div>
+    <div className='relative w-full'>
+      <Routes>
+                <Route index element={<Login />}/>          
+       </Routes>
+    </div>
   )
 }
