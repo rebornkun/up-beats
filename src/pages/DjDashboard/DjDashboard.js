@@ -71,6 +71,7 @@ export default function DjDashboard() {
           </Card>
         );
       })}
+      
     </div>
   );
 }
