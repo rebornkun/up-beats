@@ -19,6 +19,7 @@ module.exports = {
         black: "#000",
         purple: "#B507F2",
         red: "#F10B0B",
+        overlay: "rgba(43, 49, 79, .5)"
       },
     },
   },
