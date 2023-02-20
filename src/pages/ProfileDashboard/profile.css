@@ -1,0 +1,45 @@
+.scaling {
+  transition: all 0.5s ease;
+}
+.scaling:hover {
+  transform: scale(1.3);
+}
+/* dj form */
+/* .dj-form input, .user-form input{
+    border: 1px solid var(--chill-green);
+    
+}
+.dj-form input:focus, .user-form input:focus{
+    border-width: 3px;
+} */
+.user-form input,
+.dj-form input {
+  border: none;
+  caret-color: var(--chill-green);
+}
+.fieldset {
+  border: 1px solid grey;
+  border-radius: 18px;
+  padding-left: 1rem;
+}
+.fieldset:focus-within {
+  border: 1px solid var(--chill-green);
+}
+.fieldset:focus-within > legend {
+  color: var(--chill-green);
+}
+
+/* input component */
+.input-component {
+  border: none;
+  border: 0.1px solid grey;
+
+  border-radius: 6px;
+}
+.input-component {
+  border: 0.1px solid grey;
+}
+.input-component:focus-within{
+    border: 0.5px solid var(--chill-green);
+}
+
