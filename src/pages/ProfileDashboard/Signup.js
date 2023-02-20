@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Signup = () => {
+export const UserSignup = () => {
   return (
     <div>
         hvgjkgghg
@@ -8,4 +8,10 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export const DjSignUp = ()=>{
+  return (
+    <form action="">
+      registration
+    </form>
+  )
+}
