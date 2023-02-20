@@ -55,7 +55,7 @@ export const UserLogin = () => {
         <input type="checkbox" name="" id="" />
         <p className="ml-2">Remember Me</p>
       </div>
-      <p cla>Don't have an account? <Link to="/dashboard/profile/dj-register" className="text-chill-green">here</Link></p>
+      <p cla>Don't have an account? <Link to="/dashboard/profile/user-register" className="text-chill-green hover:underline">Sign up</Link></p>
       <button
         type="submit"
         className=" h-[3rem] w-full  self-center bg-chill-green text-tin-white hover:bg-[#0A0523] transition-all"
@@ -94,9 +94,9 @@ export const DjLogin = () => {
        
       
       <p cla>
-        Don't have a DJ id?{" "}
+        Don't have a DJ id?
         <Link to="/dashboard/profile/dj-register" className="text-chill-green">
-          here
+        Get id
         </Link>
       </p>
       <button
