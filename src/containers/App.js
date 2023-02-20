@@ -4,6 +4,9 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import SplashScreen from '../components/SplashScreen/SplashScreen';
 import DashBoard from "../pages/Dashboard/DashBoard";
 import "./App.css";
+import io from 'socket.io-client';
+const socket = io.connect("http://localhost:5000/api/v1/upbeats")
+socket.emit()
 
 function App() {
   return (
@@ -19,7 +22,8 @@ function App() {
           </nav>
           <section>
             <Routes>
-              <Route path="/" element={<Navigate to="dashboard" replace={true} />} />
+              {/* <Route path="/" element={<Navigate to="dashboard" replace={true} />} /> */}
+              <Route path="/" element={<DashBoard />} />
               <Route path="dashboard/*" element={<DashBoard />} />
               <Route path="*" element={<Navigate to="dashboard" replace={true} />} />
             </Routes>

@@ -42,7 +42,7 @@ export default function DjDashboard() {
   ];
 
   return (
-    <div className="userdashboard w-[90%]">
+    <div className="userdashboard w-[100%]">
       {requested_music.map((musics) => {
         return (
           <Card key={musics.id}>

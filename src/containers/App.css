@@ -63,7 +63,7 @@ nav{
 
 section{
   width: 100%;
-  overflow-y: overlay;
+  overflow-y: scroll;
   height: 100%;
 }
 section::-webkit-scrollbar {

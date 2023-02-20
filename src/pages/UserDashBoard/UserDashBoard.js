@@ -60,7 +60,7 @@ const UserDashBoard = () => {
     handleModalDisplay()
   };
   return (
-    <div className="userdashboard w-[90%]">
+    <div className="userdashboard w-[100%]">
       {users.map((user) => {
         return (
           <Card key={user.id}>
@@ -79,7 +79,7 @@ const UserDashBoard = () => {
           </Card>
         );
       })}
-      <div className="fixed right-[10%] bottom-[5%] h-3rem w-3rem z-[500] bg-black rounded-full" onClick={handleModalDisplay}>
+      <div className="fixed right-[2rem] bottom-[3rem] h-3rem w-3rem z-[500] bg-black rounded-full" onClick={handleModalDisplay}>
         <img src={Mic} alt="" />
       </div>
       {displayModal && (
