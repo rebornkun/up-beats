@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import upbeatDataService from "../../services/upbeatApi";
 import Input from "./Input";
 
 export const UserSignup = () => {
@@ -7,6 +8,7 @@ export const UserSignup = () => {
     email: "",
     username: "",
     password: "",
+    role: 'user',
   });
 
 const handleInput =({target})=>{
@@ -15,9 +17,15 @@ setUserInput({
   [target.name]: target.value
 })
 }
-  const handleUserSubmit = (e) => {
+  const handleUserSubmit = async (e) => {
     e.preventDefault();
     console.log(userInput);
+    try{
+      const regRes = await upbeatDataService.registerUser(userInput)
+      console.log('ddd');
+    }catch(e){
+      console.log(e.response.data)
+    }
   };
   return (
     <form onSubmit={handleUserSubmit} className="bg-tin-white relative left-[50%] translate-x-[-50%] md:w-[70%] lg:w-[40%] mt-[2rem] md:mt-[3rem] lg:mt-[5rem] flex flex-col gap-4 px-4 py-4 rounded-lg">
@@ -39,6 +47,7 @@ export const DjSignUp = () => {
     surname: "",
     email: "",
     djId: "",
+    role: 'dj'
 
   })
   const handleInput =({target})=>{
