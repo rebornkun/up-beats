@@ -5,7 +5,7 @@ import "./UserDashBoard.css";
 import Mic from "../../assets/svg/mic.svg";
 import Modal from "./Modal";
 import appContext from "../../context/AppContext";
-
+import upbeatDataService from "../../services/upbeatApi"
 const users = [
   {
     dj: "DJ MENT",
@@ -39,11 +39,15 @@ const users = [
   },
 ];
 
+
+
+
 const UserDashBoard = () => {
   const [displayModal, setDisplayModal] = useState(false);
   const ref = useRef(null)
 
-  // const { } = useContext(appContext)
+  const { userData} = useContext(appContext)
+  console.log(userData);
   //yet to resolve it i don tire
 //   useClickAwayListener(ref, ()=>{
 //     setDisplayModal(false)
