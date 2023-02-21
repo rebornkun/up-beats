@@ -39,14 +39,7 @@ const Sidebar = () => {
         >
           <img src={disk} alt="" className="h-full w-full" />
         </div>
-        <div
-          className={`w-[60%] ${
-            pathname == "/dashboard/dj-dashboard" ? "active" : "none"
-          } relative`}
-          onClick={() => handleNavigation("/dashboard/dj-dashboard")}
-        >
-          <img src={MusicLibrary} alt="" className="h-full w-full" />
-        </div>
+       
 
         <div
           className={`w-[60%] ${checkLink(pathname) ? "active" : "none"} relative`}

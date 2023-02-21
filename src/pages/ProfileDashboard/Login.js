@@ -67,9 +67,20 @@ export const UserLogin = () => {
 };
 
 export const DjLogin = () => {
-  const [djLoginValue, setDjLoginValue] = useState("");
+  const [djLoginValue, setDjLoginValue] = useState({
+    username: "",
+    password: "",
+  });
+
+  const handleUserInput = ({ target }) => {
+    setDjLoginValue({
+      ...djLoginValue,
+      [target.name]: target.value,
+    });
+  };
+
   const handleDjSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault();       
     console.log(djLoginValue);
   };
   return (
@@ -80,18 +91,30 @@ export const DjLogin = () => {
       <p className="text-center">Login as Dj</p>
 
        <fieldset className="fieldset">
-        <legend>Dj ID</legend>
+        <legend>Username</legend>
         <input
           type="text"
           id="dj-login"
-          placeholder="Dj ID"
-          value={djLoginValue}
-          className="h-[3rem] rounded-2xl mt-2 pl-3 w-full h-[2.5rem]"
+          placeholder="username"
+          value={djLoginValue.username}
+          name="username"
+          className="h-[2.5rem] rounded-full mt-2 pl-3 w-full"
           autoComplete="off"
-          onInput={({ target }) => setDjLoginValue(target.value)}
+          onChange={handleUserInput}
         />
        </fieldset>
-       
+       <fieldset className="fieldset flex">
+        <legend className="px-2">Password</legend>
+        <input
+          type="text"
+          placeholder="password"
+          name="password"
+          value={djLoginValue.password}
+          autoComplete="off"
+          onChange={handleUserInput}
+          className=" text-black rounded-full w-full h-[2.5rem] -ml-1 pl-5"
+        />
+      </fieldset>
       
       <p cla>
         Don't have a DJ id?
