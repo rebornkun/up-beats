@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import upbeatDataService from "../../services/upbeatApi";
 import "./profile.css";
 
 export const UserLogin = () => {
@@ -15,9 +16,15 @@ export const UserLogin = () => {
     });
   };
 
-  const handleUserSubmit = (e) => {
+  const handleUserSubmit = async (e) => {
     e.preventDefault();
     console.log(userValue);
+    try{
+      const regRes = await upbeatDataService.loginUser(userValue)
+      console.log(regRes);
+    }catch(e){
+      console.log(e.response.data)
+    }
   };
 
   return (

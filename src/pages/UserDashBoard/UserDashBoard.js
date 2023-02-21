@@ -1,13 +1,10 @@
-import { useState,useRef } from "react";
+import { useState,useRef, useContext } from "react";
 import useClickAwayListener from "../../hooks/useClickAway";
 import Card from "../../components/Card/Card";
 import "./UserDashBoard.css";
-import key1 from "../../assets/svg/music-note-purple.svg";
-import key2 from "../../assets/svg/music-note-yellow.svg";
-import music from "../../assets/svg/music-note-blue.svg";
-import profile from "../../assets/svg/profile.svg";
 import Mic from "../../assets/svg/mic.svg";
 import Modal from "./Modal";
+import appContext from "../../context/AppContext";
 
 const users = [
   {
@@ -46,6 +43,7 @@ const UserDashBoard = () => {
   const [displayModal, setDisplayModal] = useState(false);
   const ref = useRef(null)
 
+  // const { } = useContext(appContext)
   //yet to resolve it i don tire
 //   useClickAwayListener(ref, ()=>{
 //     setDisplayModal(false)
@@ -63,20 +61,7 @@ const UserDashBoard = () => {
     <div className="userdashboard w-[100%]">
       {users.map((user) => {
         return (
-          <Card key={user.id}>
-            <div className="flex items-center">
-              <img src={profile} alt="" />
-              <div className="">
-                <div className="flex space-x-0 md:space-x-2">
-                  <h3 className="font-bold text-white">{user.dj}</h3>
-                  <img src={key1} alt="" />
-                  <img src={key2} alt="" />
-                  <img src={music} alt="" />
-                </div>
-                <p>{user.song}</p>
-              </div>
-            </div>
-          </Card>
+          <Card user={user} key={user.id} />
         );
       })}
       <div className="fixed right-[2rem] bottom-[3rem] h-3rem w-3rem z-[500] bg-black rounded-full" onClick={handleModalDisplay}>
